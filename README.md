@@ -1,6 +1,6 @@
 # Web_Security_CCNY
 
-1. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting(XSS1)
+### 1. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting(XSS1)
   - [x] Summary: 
     - Vulnerability types: XSS
     - Tested in version: 4.2
