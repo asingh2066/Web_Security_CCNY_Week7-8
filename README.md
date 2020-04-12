@@ -12,14 +12,19 @@
   - [x] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-includes/class-wp-editor.php?rev=33361)
 
-2. (Required) Vulnerability Name or ID: Unauthenticated Stored Cross-Site Scripting (XSS2)
-  - [x] Summary: 
+### 2. (Required) Large File Upload Error XSS
+  - [ ] Summary: In WordPress before 4.7.5, a cross-site scripting (XSS) vulnerability exists when attempting to upload very large files, because the error message does not properly restrict presentation of the filename. 
     - Vulnerability types: XSS
     - Tested in version: 4.2
-    - Fixed in version: 4.2.4
-  - [x] GIF Walkthrough: 
-    - <img src='XSS2.gif' title='XSS2' width='' alt='' />
-  - [x] Steps to recreate: 
-    - View a new post, and insert code ```<abbr title='Web......cedric' onmouseover='alert(1)' style='position:fixed;top:0;left:0;width:100%;height:100%'>``` on the comment uder this post. Then it shows 1 when you view the comment of this post in future. 
-  - [x] Affected source code:
-    - [Link 3](https://cedricvb.be/post/wordpress-stored-xss-vulnerability-4-1-2/)
+    - Fixed in version: 4.7.5
+  - [ ] GIF Walkthrough:
+  ![](Exploit3.gif)
+  - [ ] Steps to recreate:
+  I created a large image file and uploaded the manipulated name to pass a script:
+
+  In this page:
+  ```http://wpdistillery.vm/wp-admin/media-new.php```
+  uploaded image with name:
+  ```nature<img src=x onerror=alert(1)>.png```
+  - [ ] Affected source code:
+    - [Link](https://github.com/WordPress/WordPress/commit/8c7ea71edbbffca5d9766b7bea7c7f3722ffafa6)
