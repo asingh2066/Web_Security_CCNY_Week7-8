@@ -18,7 +18,7 @@
     - Tested in version: 4.2
     - Fixed in version: 4.7.5
   - [ ] GIF Walkthrough:
-  ![](Exploit3.gif)
+  ![](Exploit2.gif)
   - [ ] Steps to recreate:
   I created a large image file and uploaded the manipulated name to pass a script:
 
