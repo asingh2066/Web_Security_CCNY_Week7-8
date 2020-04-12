@@ -1,5 +1,7 @@
 # Web_Security_CCNY
+Time spent: **10** hours spent in total
 
+> Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
 ### 1. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting(XSS1)
   - [x] Summary: 
     - Vulnerability types: XSS
