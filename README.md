@@ -2,17 +2,23 @@
 Time spent: **10** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
-### 1. (Required) Vulnerability Name or ID: Authenticated Stored Cross-Site Scripting(XSS1)
-  - [x] Summary: 
-    - Vulnerability types: XSS
-    - Tested in version: 4.2
-    - Fixed in version: 4.2.3
-  - [x] GIF Walkthrough: 
-    - <img src='XSS.gif' title='XSS' width='' alt='' />
-  - [x] Steps to recreate: 
-    - Create a new post, and then put this code ```<a onmouseover= "alert('I got you!')" >click here</a>``` in the content link. Finally click link to show message in the preview of post.
-  - [x] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-includes/class-wp-editor.php?rev=33361)
+### 1. (Required) WordPress <= 4.3 - Authenticated Shortcode Tags Cross-Site Scripting (XSS)
+  - [x] Summary: A stored, or persistent, cross-site scripting vulnerablilty which allows remote attackers to inject arbitrary web script or HTML by abusing the way unclosed HTML elements during the processing of shortcode tags are mishandled.
+    - Vulnerability types: Stored cross-site scripting (XSS)
+    - Tested in version: 4.1.1
+    - Fixed in version: 4.3
+  - [x] GIF Walkthrough:
+  ![](XSS3.gif)
+
+  - [x] Steps to recreate: Create a new page or a post and place the following line in the body:
+
+    ```
+    [caption width="1" caption='<a href="' ">]</a><a href="http://onmouseover='alert(1)'">Over here!</a>
+    ```
+
+    When another user hovers over the text, the injected code is executed.
+
+  - [x] Affected source code: [branches/4.1/src/wp-includes/post.php](https://core.trac.wordpress.org/browser/branches/4.1/src/wp-includes/post.php)
 
 ### 2. (Required) Large File Upload Error XSS
   - [ ] Summary: In WordPress before 4.7.5, a cross-site scripting (XSS) vulnerability exists when attempting to upload very large files, because the error message does not properly restrict presentation of the filename. 
