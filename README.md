@@ -1,4 +1,4 @@
-# Web_Security_CCNY
+# Web_Security_CCNY_WEEK_7and8_LAB
 Time spent: **10** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
