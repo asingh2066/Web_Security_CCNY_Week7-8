@@ -1,5 +1,5 @@
 # Web_Security_CCNY_WEEK_7and8_LAB
-Time spent: **10** hours spent in total
+Time spent: **10** hours spent in total, including setup
 
 > Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
 ### 1. (Required) WordPress <= 4.3 - Authenticated Shortcode Tags Cross-Site Scripting (XSS)
